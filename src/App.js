@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Modal from './Components/Modal';
+import { ToastContainer } from 'react-toastify';
+import Searchbar from './Components/Searchbar/Searchbar';
+
+// import Modal from './Components/Modal';
 
 // import s from './App.module.css';
 
@@ -21,8 +24,9 @@ class App extends Component {
     const { showModal } = this.state;
     return (
       <div>
-        {showModal && (
-          <Modal>
+        <Searchbar getImg={this.handleFormSubmit} />
+        {/* {showModal && (
+          <Modal onClose={this.toggleModal}>
             <h1> Это контент модалки Children</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
@@ -30,7 +34,9 @@ class App extends Component {
               Perferendis reprehenderit ipsum soluta!
             </p>
           </Modal>
-        )}
+        )} */}
+
+        <ToastContainer autoClose={3000} />
       </div>
     );
   }
