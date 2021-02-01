@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { BiSearchAlt } from 'react-icons/bi';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,7 +12,9 @@ export default class Searchbar extends Component {
 
   //получение значения input
   handleNameChange = e => {
-    this.setState({ image: e.currentTarget.value.toLowerCase() });
+    this.setState({
+      image: e.currentTarget.value.toLowerCase(),
+    });
   };
 
   //отправка значения из формы
@@ -31,8 +33,14 @@ export default class Searchbar extends Component {
   render() {
     return (
       <header className={s.Searchbar}>
-        <form className={s.SearchForm} onSubmit={this.handleSubmit}>
-          <button type="submit" className={s.SearchFormButton}>
+        <form
+          className={s.SearchForm}
+          onSubmit={this.handleSubmit}
+        >
+          <button
+            type="submit"
+            className={s.SearchFormButton}
+          >
             <BiSearchAlt style={{ marginRight: 8 }} />
           </button>
 
