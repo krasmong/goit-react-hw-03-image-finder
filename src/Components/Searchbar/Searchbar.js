@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { BiSearchAlt } from 'react-icons/bi';
 import { toast } from 'react-toastify';

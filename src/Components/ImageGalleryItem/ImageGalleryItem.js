@@ -12,7 +12,7 @@ class ImageGalleryItem extends Component {
   static propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
-    modalImg: PropTypes.string.isRequired,
+    // modalImg: PropTypes.string.isRequired,
   };
 
   toggleModal = () => {
