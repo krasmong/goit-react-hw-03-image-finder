@@ -107,10 +107,18 @@ export default class RenderGallery extends Component {
     const nextImg = this.props.imgItem;
     const prevPage = prevState.page;
     const nextPage = this.state.page;
-    console.log(nextPage);
+
+    console.log(prevImg);
+    console.log(nextImg);
+
+    // console.log(prevPage);
+    // console.log(nextPage);
+    // console.log(prevState.images);
+    // console.log(this.state.images);
 
     if (prevImg !== nextImg) {
       this.setState({ page: 1 });
+      this.setState((prevState.images = []));
     }
 
     if (prevImg !== nextImg || prevPage !== nextPage) {
